@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+}
+
+
+                                               /* PARTI EMODJI */
+  .tete{
+    
+    border: 7px solid rgb(255, 94, 0) ;
+    padding: 8em;
+    margin-left: -50em;
+    margin-top: -5em;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  .oilDroite{
+ 
+    border: 9px solid rgb(0, 0, 0) ;
+    padding: 2em;
+    margin-left: -7em;
+    margin-top: -10em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  .oilGauche{
+   
+    border: 5px solid rgb(0, 0, 0) ;
+    padding: 1em;
+    margin-left: -11.6em;
+    margin-top: -9em;
+    
+  }
+  .pointNoir1{
+    padding: 10px;
+    margin-left: 5.0em;
+    margin-top: -10em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    
+  }
+  .bouche{
+   border: solid;
+   width: 4.0em;
+   height: 2.8em;
+   border-radius: 50%;
+   margin-left: -6.4em;
+   margin-top: 6em;
+   background-color: rgb(128, 19, 19);
+  }
+  .teteB{
+    border: 7px solid rgb(255, 94, 0) ;
+    padding: 8em;
+    margin-left: -50em;
+    margin-top: -5em;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  .oilDroiteB{
+    border: 5px solid rgb(0, 0, 0) ;
+    padding: 2em;
+    margin-left: -7em;
+    margin-top: -10em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  .oilGaucheB{
+    border: 5px solid rgb(0, 0, 0) ;
+    padding: 2em;
+    margin-left: -13.6em;
+    margin-top: -10em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  .pointNoirB{
+    padding: 1em;
+    margin-left: -3.6em;
+    margin-top: -12em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+  }
+  .pointNoir1B{
+    padding: 1em;
+    margin-left: 6.5em;
+    margin-top: -12em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    
+  }
+  .boucheB{
+    border: solid;
+    width: 4.0em;
+    height: 0.8em;
+    border-radius: 40%;
+    margin-left: -7.4em;
+    margin-top: 6em;
+    background-color: rgb(128, 19, 19);
+   }
+                                              /* PartiJeux */
+   .Coureur {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 44%;
+    margin-top: 20%;
+    z-index: 3;
+  }
+  .Coureur::after
+  {
+    content: " ";
+    position: absolute;
+    top: -772px;
+    left: -800px;
+    width: 100px;
+    height: 100px;
+    rotate: 179deg;
+    border-end-start-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(0, 17, 255);
+    transform: translateX(-100%);
+    transition-duration: 6.5s ; 
+  }
+  .Coureur:hover::after
+  {
+  transform: translateX(-1900%);
+  }
+  .jeuxMangeurCoureur,.mangeur {
+    top: 50%;
+    position: absolute;
+    top: 8.8em;
+}
+                                        /* mangeur */
+.jeuxMangeurCoureur {
+    left: 50%;
+    transform: translate(-60%, -50%);
+    height: 40%;
+    width: 70%;
+    top: 1.6em;
+}
+.mangeur {
+    width: 100px;
+    height: 100px;
+    transform: translateY(-50%);
+    background: 0 0;
+    z-index: 1
+}
+.mangeur>div {
+    background-color: #ff0;
+    height: 50%;
+    width: 100%
+}
+.mangeur-top {
+    top: 0;
+    border-radius: 100px 100px 0 0;
+    animation: spinTop .5s infinite linear
+}
+
+.mangeur-bottom {
+    bottom: 0;
+    border-radius: 0 0 100px 100px;
+    animation: spinBottom .5s infinite linear
+}
+                                                /* ANNIMATIONMangeur */
+@keyframes spinTop {
+    0% {
+        transform: translateX(12%)
+    }
+    50% {
+        transform: translateX(100%)
+    }
+}
+@keyframes spinBottom {
+    0% {
+        transform: translateX(12%)
+    }
+    50% {
+        transform: translateX(12%)
+    }
+}
+                                                  /* coureur */
+.jeuxMangeurCoureur,.coureur {
+    top: 50%;
+    position: absolute
+}
+.jeuxMangeurCoureur {
+    left: 50%;
+    transform: translate(-60%, -50%);
+    height: 40%;
+    width: 60%;
+    top: 8.9em;
+}
+.coureur {
+    width: 100px;
+    height: 100px;
+    transform: translateY(-50%);
+    background: 0 0;
+    z-index: 1
+    
+}
+.coureur>div {
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 100%
+}
+.coureur-top {
+    top: 0em;
+    border-radius: 100px 100px 0 0;
+    animation: spinTop .5s infinite linear
+}
+
+.coureur-bottom {
+    bottom: 0;
+    border-radius: 0 0 100px 100px;
+    animation: spinBottom .5s infinite linear
+}
+                                      /* annimationCoureur */
+
+@keyframes spinTop {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(-35deg)
+    }
+}
+@keyframes spinBottom {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(35deg)
+    }
+}
+
